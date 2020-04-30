@@ -1,0 +1,25 @@
+.poke-img {
+  border-radius: 4px;
+}
+.poke-container {
+  .blue-block {
+    background: #30A7D7;
+    border-radius: 4px;
+    padding: 1rem;
+    .item {
+      margin-bottom: 0.5rem;
+      .label {
+        color: white;
+      }
+      .label-value {
+        font-weight: 600;
+      }
+    }
+  }
+  .type-block {
+    .badge {
+      padding: 0.4rem 3rem;
+      margin-bottom: 7px;
+    }
+  }
+}

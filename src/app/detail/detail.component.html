@@ -1,1 +1,108 @@
-<p>detail works!</p>
+<h2 class="text-center mb-3">
+  Pokemon Details
+</h2>
+<div class="container poke-container">
+  <div class="row">
+    <!-- Image section -->
+    <div class="col-6">
+      <img class="img img-fluid poke-img" src="/assets/pokemon.png">
+    </div>
+
+    <!-- Detail section -->
+    <div class="col-6">
+      <p class="mt-2">
+        Piloswine is covered by a thick coat of long hair that enables it to endure the freezing cold. This Pokemon uses
+        its tusks
+        to dig up food that has been buried under ice.
+      </p>
+
+      <!-- Pokemon Detailing block -->
+      <div class="blue-block">
+        <div class="row">
+          <!-- Left items -->
+          <div class="col-6">
+            <div class="item">
+              <div class="label">
+                Height
+              </div>
+              <div class="label-value">
+                3' 07"
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="label">
+                Weight
+              </div>
+              <div class="label-value">
+                123.0 lbs
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="label">
+                Gender
+              </div>
+              <div class="label-value">
+                Male | Female
+              </div>
+            </div>
+          </div>
+          <!-- Right Items -->
+          <div class="col-6">
+            <div class="item">
+              <div class="label">
+                Categories
+              </div>
+              <div class="label-value">
+                Swine
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="label">
+                Abilities
+              </div>
+              <div class="label-value" *ngFor="let ability of ['Oblivious','Snow Cloack'];">
+                {{ability}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Types block -->
+      <div class="type-block mt-2">
+        <div class="heading mb-1">
+          Type
+        </div>
+        <div class="heading-body">
+          <div class="badge badge-info mr-2" *ngFor="let typeName of ['Ice', 'Ground'];">
+            {{typeName}}
+          </div>
+        </div>
+      </div>
+
+      <!-- Weakness block -->
+      <div class="type-block mt-2">
+        <div class="heading mb-1">
+          Weaknesses
+        </div>
+        <div class="heading-body">
+          <div class="badge mr-2"
+            *ngFor="let weaknessName of ['Fighting', 'Fire', 'Grass', 'Steel', 'Water'];let i = index"
+            [ngClass]="{'badge-info': i % 2 === 0, 'badge-danger': i %2 !== 0}"
+          >
+            {{weaknessName}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Evolution section -->
+  <div class="row">
+    Evolutions
+  </div>
+</div>
