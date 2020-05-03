@@ -1,0 +1,17 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: -300px;
+  transition: 700ms ease;
+  .pikachu-footer {
+    background-image: url('/assets/pikachu.png');
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.footer-visible {
+  left: -80px;
+}
+

@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+<app-header></app-header>
+<div class="body">
+  <router-outlet></router-outlet>
+</div>
+<div class="footer" [ngClass]="{'footer-visible': displayFooter}">
+  <div class="pikachu-footer"></div>
+</div>
