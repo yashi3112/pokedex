@@ -10,12 +10,17 @@ export class CardComponent implements OnInit {
 
   @Input() pokemon:any;
   image:string;
+  id:number;
+  abitlitiesList:any[]=[];
+
   constructor(private pokemonService:PokemonService) { }
 
   ngOnInit(): void {
     this.pokemonService.getPokemonDetail(this.pokemon.url).subscribe(response => {
       console.log(response);
       this.image=response.sprites.front_default;
+     // this.abitlitiesList=response.abilities.ability.name;
+     this.id=response.id;
     });
   }
 
