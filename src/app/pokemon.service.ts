@@ -18,4 +18,8 @@ export class PokemonService {
   {
     return this.httpService.get(url);
   }
+  getPokemonDetailById(id:number):Observable<any>
+  {
+    return this.httpService.get('https://pokeapi.co/api/v2/pokemon/'+id);
+  }
 }

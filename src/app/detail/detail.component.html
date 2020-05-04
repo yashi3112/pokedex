@@ -1,11 +1,11 @@
 <h2 class="text-center mb-3">
-  Pokemon Details
+  {{pokemon?.name}}
 </h2>
 <div class="container poke-container">
   <div class="row">
     <!-- Image section -->
     <div class="col-6">
-      <img class="img img-fluid poke-img" src="/assets/pokemon.png">
+      <img class="img img-fluid poke-img" [src]="pokemon?.sprites?.front_shiny">
     </div>
 
     <!-- Detail section -->
@@ -26,7 +26,7 @@
                 Height
               </div>
               <div class="label-value">
-                3' 07"
+                {{pokemon?.height}}
               </div>
             </div>
 
@@ -35,7 +35,7 @@
                 Weight
               </div>
               <div class="label-value">
-                123.0 lbs
+               {{pokemon?.weight}}
               </div>
             </div>
 
@@ -55,7 +55,7 @@
                 Categories
               </div>
               <div class="label-value">
-                Swine
+              {{categories}}
               </div>
             </div>
 
