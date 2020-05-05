@@ -1,15 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoaderService {
 
-  constructor(private http:HttpClientModule) { }
+  public loader$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  counter: number = 0;
+  constructor() { }
 
-  show()
-  {
-    this.http
+  show() {
+    this.counter++;
+    this.loader$.next(true);
+  }
+  hide() {
+    this.counter--;
+    if (this.counter <= 0) {
+      this.forceHide();
+    }
+
+  }
+  forceHide() {
+    this.counter = 0;
+    this.loader$.next(false);
   }
 }

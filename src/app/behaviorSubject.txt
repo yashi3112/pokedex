@@ -1,2 +1,15 @@
 1. all subscribers have default value 
 2. will get last subscribed value --->to all subscribers
+
+/ Show
+  // 1. Increment the counter
+  // 2. Set the value true in BehaviorSubject.
+
+  // Hide
+  // 1. Decrement the counter
+  // 2. If counter is at 0 set the value false in BehaviorSubject.
+
+
+  // ForceHide
+  // 1. Set the counter to 0.
+  // 2. Set the value false in BehaviorSubject.
