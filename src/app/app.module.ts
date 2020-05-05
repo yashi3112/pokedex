@@ -8,6 +8,7 @@ import { DetailComponent } from './detail/detail.component';
 import { CardComponent } from './card/card.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './header/header.component';
     ListComponent,
     DetailComponent,
     CardComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

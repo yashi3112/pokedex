@@ -59,12 +59,12 @@
               </div>
             </div>
 
-            <div class="item">
+            <div class="item" *ngIf="pokemon?.abilities">
               <div class="label">
                 Abilities
               </div>
-              <div class="label-value" *ngFor="let ability of ['Oblivious','Snow Cloack'];">
-                {{ability}}
+              <div class="label-value" *ngFor="let ability of pokemon.abilities">
+                {{ability.ability.name}}
               </div>
             </div>
           </div>
@@ -72,13 +72,13 @@
       </div>
 
       <!-- Types block -->
-      <div class="type-block mt-2">
+      <div class="type-block mt-2" *ngIf="pokemon?.stats">
         <div class="heading mb-1">
           Type
         </div>
         <div class="heading-body">
-          <div class="badge badge-info mr-2" *ngFor="let typeName of ['Ice', 'Ground'];">
-            {{typeName}}
+          <div class="badge badge-info mr-2" *ngFor="let typeName of pokemon.stats;">
+            {{typeName.stat.name}}
           </div>
         </div>
       </div>

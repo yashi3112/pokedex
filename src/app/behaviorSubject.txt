@@ -1,0 +1,2 @@
+1. all subscribers have default value 
+2. will get last subscribed value --->to all subscribers
